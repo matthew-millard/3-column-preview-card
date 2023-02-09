@@ -1,0 +1,142 @@
+*, 
+*::after, 
+*::before {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    background-color: hsl(0, 0%, 95%);
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+
+.container-cards {
+    width: 90%;
+    max-width: 375px;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  */
+    margin: 4rem auto;
+    border-radius: .5em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    'sedans'
+    'suvs'
+    'luxury';
+    
+}
+
+.cards {
+   padding-top: 2rem; 
+   padding-bottom: 2rem;
+}
+
+
+
+.card {
+    width: 75%;
+    margin: 0 auto;
+    
+}
+
+.card__image--size {
+    width: 3rem;
+}
+
+.accent-bright-orange {
+    background-color: hsl(31, 77%, 52%);
+    color:hsl(31, 77%, 52%);
+}
+
+.accent-dark-cyan {
+    background-color: hsl(184, 100%, 22%);
+    color:hsl(184, 100%, 22%);
+}
+
+.accent-very-dark-cyan {
+    background-color: hsl(179, 100%, 13%);
+    color:hsl(179, 100%, 13%);
+}
+
+.card-sedans {
+    grid-area: sedans;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+
+.card-suvs {
+    grid-area: suvs;
+}
+
+.card-luxury {
+    grid-area: luxury;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    
+}
+.card-title {
+    font-family: 'Big Shoulders Display', sans-serif;
+    color: hsl(0, 0%, 95%);
+    font-size: 1.9rem;
+    font-weight: 700;
+    padding-top: 1rem;
+    
+}
+
+.card-description {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 0.75rem;
+    padding-bottom: 2rem; 
+    padding-top: 1rem; 
+    display: inline-block;
+    
+}
+
+.card-cta-btn {
+    display: block;
+    text-align: center;    
+    text-decoration: none;
+    background-color:hsl(0, 0%, 95%);
+    font-size: .75rem;
+    padding: .5rem 1rem;
+    border-radius: 100px;  
+    width: 7rem;
+}
+
+
+
+
