@@ -53,21 +53,26 @@ Users should be able to:
 
 - I have attempted to play a bit of code golf with this challenge. Throughout I kept trying to think ahead as to where I could reuse my classes as much as possible.
 
-- Hide content for accessibility. I was previously making the mistake setting `{visibility: hidden;}` Now I do the following:
-  `.hidden {position: absolute !important;
+- Hide content for accessibility. I was previously making the mistake setting ```{visibility: hidden;}```
+Now I do the following:
+```
+.hidden {
+    position: absolute !important;
     height: 1px;
     width: 1px;
     overflow: hidden;
     clip: rect(1px 1px 1px 1px);
-    clip: rect(1px, 1px, 1px, 1px);}`
+    clip: rect(1px, 1px, 1px, 1px);
+}
+```
 
 ### Accessibility Resources 
 
-- [](https://www.a11yproject.com/posts/how-to-hide-content/)
+- [How-to-Hide-Content](https://www.a11yproject.com/posts/how-to-hide-content/)
 
-- [](https://snook.ca/archives/html_and_css/hiding-content-for-accessibility)
+- [Hiding-Content-for-Accessibility](https://snook.ca/archives/html_and_css/hiding-content-for-accessibility)
 
-- [](https://developer.chrome.com/blog/full-accessibility-tree/)
+- [Chrome - Full-Accessibility-Tree](https://developer.chrome.com/blog/full-accessibility-tree/)
 
 ### Continued development
 
