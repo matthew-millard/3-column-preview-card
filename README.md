@@ -11,6 +11,7 @@ Frontend Mentor Challenge - 3 column preview card
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
+  - [Accessibility Resources](#accessibility-resources )
   - [Continued development](#continued-development)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
@@ -41,7 +42,8 @@ Users should be able to:
 
 - HTML
 - CSS
-- Grid template areas
+- Grid
+- Flexbox
 - Firefox Developers Tools
 - VS Code
 - Mobile-first workflow
@@ -51,55 +53,25 @@ Users should be able to:
 
 - I have attempted to play a bit of code golf with this challenge. Throughout I kept trying to think ahead as to where I could reuse my classes as much as possible.
 
-- Code I am proud of:
-  `.cards {
-    position: absolute;
-    top: 0;
-    left:50%;
-    transform: translate(-50%, 0%);
-    padding: 2rem 0;
-    width: 90%;
-    max-width: 400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    grid-template-areas:
-    'sedans'
-    'suvs'
-    'luxury';
-}`
+- Hide content for accessibility. I was previously making the mistake setting `{visibility: hidden;}` Now I do the following:
+  `.hidden {position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);}`
 
-`@media (min-width: 1440px) {
-.cards {
-position:absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-max-width: 800px;
-grid-template-rows: 1fr;
-grid-template-columns: repeat(3, 1fr);
-grid-template-areas:
-'sedans suvs luxury';
-}
+### Accessibility Resources 
 
-    .cards__card--sedans {
-        border-radius: 7px 0 0 7px;}
-    .cards__card--luxury {
-        border-radius: 0 7px 7px 0;}
+- [](https://www.a11yproject.com/posts/how-to-hide-content/)
 
-    .content img {
-        width: 55px;
-        margin: 1rem 0 2rem;
-    }
-    .content p:first-of-type {
-        margin-bottom: 4rem;
-    }
+- [](https://snook.ca/archives/html_and_css/hiding-content-for-accessibility)
 
-}`
+- [](https://developer.chrome.com/blog/full-accessibility-tree/)
 
 ### Continued development
 
+- Accessibility practise.
 - Keep trying to write efficent and readable code.
 - Make an effort to add comments in the code.
 - Develop a better workflow.
@@ -115,3 +87,7 @@ grid-template-areas:
 - Kevin Powell - [@kevinPowell](https://www.kevinpowell.co/)
 
 - CSS-TRICKS - [@ChrisCoyier](https://css-tricks.com/logic-in-css-media-queries/)
+
+- Sameer Singh - [@SameerJS6](https://www.frontendmentor.io/profile/SameerJS6) Thanks Sameer for the helpful feedback. It is greatly appreciated.
+
+- Vanza Setia - [@vanzasetia](https://www.frontendmentor.io/profile/vanzasetia) Thanks Vanza for taking the time to give me feeback and point me in the right direction to learn more about accessibility.
